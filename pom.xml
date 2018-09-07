@@ -12,6 +12,7 @@
         <module>registry</module>
         <module>provider</module>
         <module>consumer</module>
+        <module>api-gateway</module>
     </modules>
 
 </project>
