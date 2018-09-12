@@ -14,6 +14,6 @@ zuul:
   host:
     connect-timeout-millis: 8000
     socket-timeout-millis: 8000
-#  SendErrorFilter:
-#    error:
-#      disable: true
+  SendErrorFilter:
+    error:
+      disable: true
