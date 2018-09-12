@@ -38,7 +38,7 @@ http://localhost:9000/eureka/
 
 ### 待完成列表
 
-
+- 新建common模块
 - swagger
 - spring-cloud-config
 - Sleuth
