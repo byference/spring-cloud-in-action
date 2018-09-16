@@ -1,4 +1,4 @@
-package com.github.baifenghe.provider;
+package com.github.baifenghe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
