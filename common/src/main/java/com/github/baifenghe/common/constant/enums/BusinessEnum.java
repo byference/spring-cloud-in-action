@@ -10,7 +10,8 @@ public enum BusinessEnum {
 
     UNKNOW_ERROR(-1, "未知错误"),
     SUCCESS(1, "成功"),
-    ERROR(0, "失败");
+    ERROR(0, "失败"),
+    PARAMS_CHECK_ERROR(10000, "参数校验失败");
 
     private Integer code;
     private String msg;
