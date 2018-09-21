@@ -1,6 +1,8 @@
 package com.github.baifenghe.provider.controller;
 
+import com.github.baifenghe.common.anno.ParamsCheck;
 import com.github.baifenghe.common.constant.CommonConst;
+import com.github.baifenghe.common.util.R;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,8 +17,13 @@ public class HelloController {
 
 
     @PostMapping("/hello")
-    public String hello(String userName) {
+    @ParamsCheck(params = "userName,password")
+    public String hello(String userName, String password) {
 
-        return "provider say : hello, " + userName + ", this is common 模块的常量： " + CommonConst.SUCCESS;
+        String s =  "hello, " + userName + ", this is provider 9001";
+        return R.SUCCESS(CommonConst.SUCCESS, s, null);
+
     }
+
+
 }
