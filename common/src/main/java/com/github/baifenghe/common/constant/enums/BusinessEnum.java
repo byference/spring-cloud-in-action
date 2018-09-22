@@ -8,10 +8,18 @@ package com.github.baifenghe.common.constant.enums;
  */
 public enum BusinessEnum {
 
+
+    PARAMS_CHECK_ERROR(10000, "参数校验失败"),
+    TOKEN_EMPTY_ERROR(10001, "token不能为空"),
+
+
+
+
+
+
     UNKNOW_ERROR(-1, "未知错误"),
     SUCCESS(1, "成功"),
-    ERROR(0, "失败"),
-    PARAMS_CHECK_ERROR(10000, "参数校验失败");
+    ERROR(0, "失败");
 
     private Integer code;
     private String msg;

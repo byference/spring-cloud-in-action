@@ -19,7 +19,6 @@ http://localhost:9000/eureka/
 ### 模块说明
 
 - api网关- api-gateway:9999
-
 - 注册中心- registry:9000
 - 生产者- provider:9001
 - 消费者- consumer:9002
@@ -33,11 +32,16 @@ http://localhost:9000/eureka/
 
 
 
+### 其他说明
+
+- 注册中心地址：`http://localhost:9000/eureka/`
+- swagger文档地址：`http://localhost:9999/swagger-ui.html#/`
+
 
 ### 待完成列表
 
-- swagger
 - spring-cloud-config
 - oauth2
 - Sleuth
 - docker
+- 将通用模块抽取到父pom中

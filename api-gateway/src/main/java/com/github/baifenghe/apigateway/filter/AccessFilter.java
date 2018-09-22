@@ -1,5 +1,7 @@
 package com.github.baifenghe.apigateway.filter;
 
+import com.github.baifenghe.common.constant.enums.BusinessEnum;
+import com.github.baifenghe.common.util.R;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
@@ -20,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 public class AccessFilter extends ZuulFilter {
 
 
-    Logger log = LoggerFactory.getLogger(this.getClass());
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     /**
      * 过滤器执行的生命周期
@@ -47,21 +49,26 @@ public class AccessFilter extends ZuulFilter {
     }
 
     @Override
-    public Object run() throws ZuulException {
+    public Object run() {
 
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        log.info(">> send {} request to  ==> {}", request.getMethod(), request.getRequestURL());
+        log.info("==> send {} request to  ==> {}", request.getMethod(), request.getRequestURL());
+
+        String swaggerApiAddress = "/v2/api-docs";
+        String uri = request.getRequestURI();
+        if (uri.contains(swaggerApiAddress)) {
+            return null;
+        }
 
         String token = request.getHeader("token");
         if(StringUtils.isEmpty(token)) {
             log.warn(">> access token is empty");
             ctx.setSendZuulResponse(false);
             // ctx.getResponse().setContentType("application/json;charset=UTF-8");
-            ctx.setResponseBody("access token is empty");
+            ctx.setResponseBody(R.FAILED(BusinessEnum.TOKEN_EMPTY_ERROR.getCode(), BusinessEnum.TOKEN_EMPTY_ERROR.getMsg(), "access token is empty"));
             return null;
         }
-
         return null;
     }
 }
