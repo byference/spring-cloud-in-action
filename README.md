@@ -1,20 +1,11 @@
-## spring cloud 脚手架
+## spring cloud 实战
 
+![](https://img.shields.io/badge/spring--cloud--in--action-1.0--SNAPSHOT-green.svg)
     
-    本项目作为springcloud开发脚手架构建，目前还在完善中，
-    模块仅涉及springcloud组件日常使用的demo，不涉及业务开发，
-    实战项目敬请期待，
+    本项目作为spring cloud各组件 组合使用的实战（熟悉）项目，目前还在完善中，
+    不涉及业务开发，
+    关于spring cloud脚手架项目敬请期待，
     马不停蹄的更新中...
-
-
-### 注册中心地址
-
-~~~
-http://localhost:9000/eureka/
-~~~
-
-
-
 
 ### 模块说明
 
