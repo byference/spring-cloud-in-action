@@ -15,6 +15,7 @@
         <module>consumer</module>
         <module>api-gateway</module>
         <module>common</module>
+        <module>zipkin-server</module>
     </modules>
 
 </project>

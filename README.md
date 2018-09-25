@@ -25,14 +25,16 @@
 
 ### 其他说明
 
-- 注册中心地址：`http://localhost:9000/eureka/`
-- swagger文档地址：`http://localhost:9999/swagger-ui.html#/`
+- 注册中心地址: `http://localhost:9000/eureka/`
+- swagger文档地址: `http://localhost:9999/swagger-ui.html#/`
+- Zipkin管理页面: `http://localhost:9411/`
 
 
 ### 待完成列表
 
 - spring-cloud-config
-- oauth2
-- Sleuth
-- docker
 - 将通用模块抽取到父pom中
+
+
+- oauth2
+- docker
