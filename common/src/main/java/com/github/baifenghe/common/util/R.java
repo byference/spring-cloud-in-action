@@ -1,9 +1,10 @@
 package com.github.baifenghe.common.util;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.github.baifenghe.common.constant.CommonConst;
-import com.github.baifenghe.common.entity.ResponseModel;
+import com.github.baifenghe.common.entity.ResponseInfo;
+
+import java.io.Serializable;
 
 /**
  * 自定义返回体工具类
@@ -11,27 +12,28 @@ import com.github.baifenghe.common.entity.ResponseModel;
  * @author bfh
  * @since 1.0.0
  */
-public class R {
+public class R implements Serializable {
 
-    public static String SUCCESS(Integer code, String msg, Object data) {
+    private static final long serialVersionUID = 1L;
 
-        ResponseModel rm = new ResponseModel();
-        rm.setFlag(CommonConst.SUCCESS);
-        rm.setCode(code);
-        rm.setMsg(msg);
-        rm.setData(data);
+    public static<T> String SUCCESS(String msg, T data) {
 
-        return JSON.toJSONString(rm, SerializerFeature.WriteNullStringAsEmpty);
+        ResponseInfo<T> info = new ResponseInfo<>();
+        info.setCode(CommonConst.SUCCESS);
+        info.setMessage(msg);
+        info.setData(data);
+        return JSON.toJSONString(info);
+
     }
 
-    public static String FAILED(Integer code, String msg, Object data) {
+    public static<T> String FAILED(Integer code, String msg, T data) {
 
-        ResponseModel rm = new ResponseModel();
-        rm.setFlag(CommonConst.FAILED);
-        rm.setCode(code);
-        rm.setMsg(msg);
-        rm.setData(data);
+        ResponseInfo info = new ResponseInfo();
+        info.setCode(code);
+        info.setMessage(msg);
+        info.setData(data);
+        return JSON.toJSONString(info);
 
-        return JSON.toJSONString(rm, SerializerFeature.WriteNullStringAsEmpty);
     }
+
 }

@@ -27,7 +27,7 @@
 
 - 注册中心地址: `http://localhost:9000/eureka/`
 - swagger文档地址: `http://localhost:9999/swagger-ui.html#/`
-- Zipkin管理页面: `http://localhost:9411/`
+- zipkin管理页面: `http://localhost:9411/`
 
 
 ### 待完成列表

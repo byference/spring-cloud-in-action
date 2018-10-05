@@ -19,6 +19,7 @@ import java.lang.reflect.Method;
 
 /**
  * 参数校验切面
+ * 可以使用拦截器来做，目前还不支持json格式的参数校验
  *
  * @author bfh
  * @since 1.0.0

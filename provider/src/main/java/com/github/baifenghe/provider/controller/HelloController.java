@@ -9,6 +9,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 测试控制类
  *
@@ -26,7 +28,7 @@ public class HelloController {
     public String hello(String userName) {
 
         String msg =  "hello, " + userName + ", this is provider 9001";
-        return R.SUCCESS(BusinessEnum.SUCCESS.getCode(), msg, null);
+        return R.SUCCESS(msg, "data");
 
     }
 

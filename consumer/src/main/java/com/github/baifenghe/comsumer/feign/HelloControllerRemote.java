@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface HelloControllerRemote {
 
     @PostMapping("/hello")
-    public String hello(@RequestParam("userName") String userName);
+    String hello(@RequestParam("userName") String userName);
 
 }
