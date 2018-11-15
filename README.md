@@ -32,6 +32,7 @@
 
 ### 待完成列表
 
+- 参数校验注解在 多注解时存在的问题
 - 添加lombok
 - spring-cloud-config
 - 将通用模块抽取到父pom中
