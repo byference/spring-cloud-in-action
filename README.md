@@ -32,6 +32,7 @@
 
 ### 待完成列表
 
+- 添加lombok
 - spring-cloud-config
 - 将通用模块抽取到父pom中
 
