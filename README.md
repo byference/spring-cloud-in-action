@@ -32,8 +32,7 @@
 
 ### 待完成列表
 
-- 校验使用hibernate validate
-- 引入lombok
+- 优化使用hibernate validate校验返回信息
 - 参数校验注解在 多注解时存在的问题
 - spring-cloud-config
 - 将通用模块抽取到父pom中
