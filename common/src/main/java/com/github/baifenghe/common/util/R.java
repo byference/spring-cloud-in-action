@@ -28,7 +28,7 @@ public class R implements Serializable {
 
     public static<T> String FAILED(Integer code, String msg, T data) {
 
-        ResponseInfo info = new ResponseInfo();
+        ResponseInfo<T> info = new ResponseInfo<>();
         info.setCode(code);
         info.setMessage(msg);
         info.setData(data);

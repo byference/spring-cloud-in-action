@@ -1,15 +1,14 @@
 package com.github.baifenghe.provider.controller;
 
-import com.github.baifenghe.common.anno.ParamsCheck;
-import com.github.baifenghe.common.constant.CommonConst;
-import com.github.baifenghe.common.constant.enums.BusinessEnum;
 import com.github.baifenghe.common.util.R;
+import com.github.baifenghe.provider.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
+
 
 /**
  * 测试控制类
@@ -24,10 +23,10 @@ public class HelloController {
 
     @ApiOperation("provider测试hello")
     @PostMapping("/hello")
-    @ParamsCheck(params = "userName")
-    public String hello(String userName) {
+    //@ParamsCheck(params = "userName")
+    public String hello(@Validated User user) {
 
-        String msg =  "hello, " + userName + ", this is provider 9001";
+        String msg =  "hello, " + user.getUserName() + ", this is provider 9001";
         return R.SUCCESS(msg, "data");
 
     }
