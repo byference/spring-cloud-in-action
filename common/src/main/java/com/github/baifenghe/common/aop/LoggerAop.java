@@ -1,5 +1,7 @@
 package com.github.baifenghe.common.aop;
 
+import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -17,9 +19,9 @@ import org.springframework.util.StringUtils;
  */
 @Aspect
 @Component
+@Slf4j
 public class LoggerAop {
 
-    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     /**
      * 切点选择为所有模块的controller层
@@ -33,20 +35,10 @@ public class LoggerAop {
     @After("methodLog()")
     public void doAfterReturning(JoinPoint joinPoint){
 
-        log.info("==> targetName: {}", joinPoint.getTarget().getClass().getName());
-        log.info("==> methodName: {}", joinPoint.getSignature().getName());
-
-        StringBuilder results = new StringBuilder();
-        for (Object param : joinPoint.getArgs()) {
-            if (!StringUtils.isEmpty(param)) {
-                results.append(param).append(",");
-            }
-        }
-        int length = results.length();
-        if (length > 0) {
-            String result = results.substring(0, length - 1);
-            log.info("<== params: {}", result);
-        }
+        log.info("==> LoggerAop: {}#{}",
+                joinPoint.getTarget().getClass().getName(),
+                joinPoint.getSignature().getName());
+        log.info("<== params: {}", JSON.toJSON(joinPoint.getArgs()));
 
     }
 }
