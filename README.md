@@ -32,8 +32,7 @@
 
 ### 待完成列表
 
-- 优化使用hibernate validate校验返回信息
-- 参数校验注解在 多注解时存在的问题
+- 参数校验注解支持json格式参数
 - spring-cloud-config
 - 将通用模块抽取到父pom中
 
