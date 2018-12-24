@@ -33,7 +33,6 @@
 ### 待完成列表
 
 - 增加支持json格式参数校验注解
-- 新增banner
 - 新建2.0分支，将boot版本升级到2.x
 - spring-cloud-config
 - 将通用模块抽取到父pom中
