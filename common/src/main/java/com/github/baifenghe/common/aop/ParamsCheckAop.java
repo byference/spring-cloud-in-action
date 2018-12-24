@@ -49,11 +49,8 @@ public class ParamsCheckAop {
                 if (StringUtils.isEmpty(request.getParameter(parameter))) {
                     throw new BusinessException(parameter + " 不能为空", BusinessEnum.PARAMS_CHECK_ERROR.getCode());
                 }
-                // TODO: 支持json
             }
         }
-
     }
-
 
 }

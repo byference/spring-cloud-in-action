@@ -1,6 +1,7 @@
 package com.github.baifenghe.common.exception;
 
 import com.github.baifenghe.common.constant.enums.BusinessEnum;
+import lombok.Getter;
 
 /**
  * 业务异常类
@@ -8,6 +9,7 @@ import com.github.baifenghe.common.constant.enums.BusinessEnum;
  * @author bfh
  * @since 1.0.0
  */
+@Getter
 public class BusinessException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
@@ -29,12 +31,5 @@ public class BusinessException extends RuntimeException {
         this.code = code;
     }
 
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        this.code = code;
-    }
 
 }
