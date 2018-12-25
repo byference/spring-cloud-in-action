@@ -9,4 +9,5 @@
              \ \_\
               \/_/
 
-::  还没有想好名字    ::   还没有想好名字    ::
+ :: Spring Boot ::       (${spring-boot.version})
+
