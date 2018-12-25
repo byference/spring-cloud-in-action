@@ -32,8 +32,8 @@
 
 ### 待完成列表
 
-- 增加支持json格式参数校验注解
-- 新建2.0分支，将boot版本升级到2.x
+- 将boot版本升级到2.x
+- 将common封装成starter
 - spring-cloud-config
 - 将通用模块抽取到父pom中
 
