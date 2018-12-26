@@ -16,20 +16,7 @@
         <spring-cloud.version>Greenwich.RC2</spring-cloud.version>
     </properties>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
     <dependencies>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-server</artifactId>
@@ -41,7 +28,6 @@
             <artifactId>zipkin-autoconfigure-ui</artifactId>
             <version>2.7.1</version>
         </dependency>
-
 
     </dependencies>
 
