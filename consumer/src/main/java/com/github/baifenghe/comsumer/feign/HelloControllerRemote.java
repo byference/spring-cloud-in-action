@@ -1,7 +1,7 @@
 package com.github.baifenghe.comsumer.feign;
 
 import com.github.baifenghe.comsumer.hystric.HelloControllerRemoteHystric;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 

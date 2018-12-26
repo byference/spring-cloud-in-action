@@ -32,7 +32,6 @@
 
 ### 待完成列表
 
-- 将boot版本升级到2.x
 - 将common封装成starter
 - spring-cloud-config
 - 将通用模块抽取到父pom中
@@ -42,7 +41,6 @@
 - docker
 
 
-
 ### 说明
 - zipkin：
-    spring boot 2.x后官方就不推荐自行定制编译，而是直接提供了编译好的jar包来给我们使用
+    spring boot 2.x后官方就不推荐自行定制编译，推荐并提供了编译好的jar包供我们使用。
