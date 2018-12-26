@@ -40,3 +40,9 @@
 
 - oauth2
 - docker
+
+
+
+### 说明
+- zipkin：
+    spring boot 2.x后官方就不推荐自行定制编译，而是直接提供了编译好的jar包来给我们使用

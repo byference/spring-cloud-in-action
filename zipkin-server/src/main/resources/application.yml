@@ -3,3 +3,8 @@ spring:
     name: zipkin-server
 server:
   port: 9411
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
