@@ -1,11 +1,30 @@
 ## spring cloud 实战
 
 ![](https://img.shields.io/badge/spring--cloud--in--action-1.0--SNAPSHOT-green.svg)
+
+
     
-    本项目作为spring cloud各组件 组合使用的实战（熟悉）项目，目前还在完善中，
-    不涉及业务开发，
-    关于spring cloud脚手架项目敬请期待，
-    马不停蹄的更新中...
+本项目作为spring cloud各组件组合使用的实战（熟悉）项目，目前还在完善中，不涉及业务开发，关于spring cloud脚手架项目敬请期待，
+马不停蹄的更新中...
+
+
+
+> 因为Spring Cloud Netflix 进入维护模式，所以准备替换部分组件：Hystrix -> Resilience4j, Zuul -> Spring Cloud Gateway
+
+
+
+
+### 待完成列表
+
+
+- spring-cloud-config
+- 将通用模块抽取到父pom中
+
+
+- oauth2
+- docker
+
+
 
 ### 模块说明
 
@@ -30,17 +49,8 @@
 - zipkin管理页面: `http://localhost:9411/`
 
 
-### 待完成列表
-
-- 将common封装成starter
-- spring-cloud-config
-- 将通用模块抽取到父pom中
 
 
-- oauth2
-- docker
-
-
-### 说明
+### 其他
 - zipkin：
     spring boot 2.x后官方就不推荐自行定制编译，推荐并提供了编译好的jar包供我们使用。
