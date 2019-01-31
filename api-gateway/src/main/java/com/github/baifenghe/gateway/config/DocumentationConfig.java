@@ -1,4 +1,4 @@
-package com.github.baifenghe.apigateway.config;
+package com.github.baifenghe.gateway.config;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;

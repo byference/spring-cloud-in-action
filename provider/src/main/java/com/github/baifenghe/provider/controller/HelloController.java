@@ -6,6 +6,7 @@ import com.github.baifenghe.provider.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -45,6 +46,14 @@ public class HelloController {
         String msg =  "hello, " + user.getUserName() + ", this is provider 9001";
         return R.SUCCESS(msg, "data");
 
+    }
+
+    /**
+     * 测试 AddRequestParameter
+     */
+    @GetMapping("/foo")
+    public String foo(String foo) {
+        return "hello " + foo + " !";
     }
 
 

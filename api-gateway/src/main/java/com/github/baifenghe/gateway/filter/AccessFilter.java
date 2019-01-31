@@ -1,4 +1,4 @@
-package com.github.baifenghe.apigateway.filter;
+package com.github.baifenghe.gateway.filter;
 
 import com.github.baifenghe.common.constant.enums.BusinessEnum;
 import com.github.baifenghe.common.util.R;

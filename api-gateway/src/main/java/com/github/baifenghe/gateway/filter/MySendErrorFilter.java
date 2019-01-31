@@ -1,4 +1,4 @@
-package com.github.baifenghe.apigateway.filter;
+package com.github.baifenghe.gateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
