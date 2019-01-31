@@ -4,12 +4,13 @@
 
 
     
-本项目作为spring cloud各组件组合使用的实战（熟悉）项目，目前还在完善中，不涉及业务开发，关于spring cloud脚手架项目敬请期待，
-马不停蹄的更新中...
 
 
 
-> 因为Spring Cloud Netflix 进入维护模式，所以准备替换部分组件：Hystrix -> Resilience4j, Zuul -> Spring Cloud Gateway
+
+> 本项目作为spring cloud各组件组合使用的实战（熟悉）项目，目前还在完善中，不涉及业务开发，
+关于spring cloud脚手架项目敬请期待，因为Spring Cloud Netflix 进入维护模式，
+所以准备替换部分组件：Hystrix -> Resilience4j, Zuul -> Spring Cloud Gateway
 
 
 
@@ -17,26 +18,30 @@
 ### 待完成列表
 
 
-- spring-cloud-config
+- Zuul -> Spring Cloud Gateway
+- Hystrix -> Resilience4j
+
+
+
 - 将通用模块抽取到父pom中
-
-
 - oauth2
 - docker
 
 
-
 ### 模块说明
 
-- api网关- api-gateway:9999
-- 注册中心- registry:9000
-- 生产者- provider:9001
-- 消费者- consumer:9002
+
+- api网关(zuul) api-gateway:9999
+- api网关(spring-cloud-gateway) gateway:9999
+- 注册中心 registry:9000
+- 生产者 provider:9001
+- 消费者 consumer:9002
 
 
 
 
 ### 使用说明
+
 
 - 待添加
 
