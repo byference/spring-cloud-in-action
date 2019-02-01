@@ -4,16 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.baifenghe</groupId>
-    <artifactId>gateway</artifactId>
+    <artifactId>zuul-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>gateway</name>
-    <description>gateway project for Spring Boot</description>
+    <name>zuul-gateway</name>
+    <description>zuul gateway project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <spring-cloud.version>Greenwich.RC2</spring-cloud.version>
     </properties>
 
     <parent>
@@ -31,12 +31,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
 
         <dependency>
@@ -46,16 +41,10 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
+            <artifactId>common</artifactId>
+            <groupId>com.github.baifenghe</groupId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-        <!--<dependency>-->
-            <!--<artifactId>common</artifactId>-->
-            <!--<groupId>com.github.baifenghe</groupId>-->
-            <!--<version>0.0.1-SNAPSHOT</version>-->
-        <!--</dependency>-->
 
     </dependencies>
 

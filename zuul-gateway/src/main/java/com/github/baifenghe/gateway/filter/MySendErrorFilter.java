@@ -57,7 +57,6 @@ public class MySendErrorFilter extends ZuulFilter {
         return null;
     }
 
-
     private void writeResponse(InputStream zin, OutputStream out) throws Exception {
         byte[] bytes = new byte[1024];
         int bytesRead = -1;
