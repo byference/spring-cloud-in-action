@@ -14,14 +14,12 @@ import java.util.List;
  * @author bfh
  * @since 1.0.0
  */
-@Component
 @Primary
+@Component
 public class SwaggerProvider implements SwaggerResourcesProvider {
 
     @Value("${spring.application.name}")
     public String applicationName;
-
-    public static final String API_URI = "/v2/api-docs";
 
     private final RouteLocator routeLocator;
 
