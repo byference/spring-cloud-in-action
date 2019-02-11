@@ -4,18 +4,15 @@ import com.alibaba.fastjson.JSON;
 import com.github.baifenghe.common.constant.CommonConst;
 import com.github.baifenghe.common.entity.ResponseInfo;
 
-import java.io.Serializable;
-
 /**
  * 自定义返回体工具类
  *
  * @author bfh
  * @since 1.0.0
  */
-public class R implements Serializable {
+public class R {
 
-    private static final long serialVersionUID = 1L;
-
+    @Deprecated
     public static<T> String SUCCESS(String msg, T data) {
 
         ResponseInfo<T> info = new ResponseInfo<>();
@@ -26,6 +23,7 @@ public class R implements Serializable {
 
     }
 
+    @Deprecated
     public static<T> String FAILED(Integer code, String msg, T data) {
 
         ResponseInfo<T> info = new ResponseInfo<>();

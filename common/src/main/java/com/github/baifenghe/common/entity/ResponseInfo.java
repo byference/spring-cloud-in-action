@@ -1,11 +1,14 @@
 package com.github.baifenghe.common.entity;
 
+import lombok.Data;
+
 /**
  * 自定义返回体格式
  *
  * @author bfh
  * @since 1.0.0
  */
+@Data
 public class ResponseInfo<T> {
 
     private Integer code;
@@ -13,28 +16,4 @@ public class ResponseInfo<T> {
     private String message;
 
     private T data;
-
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
 }

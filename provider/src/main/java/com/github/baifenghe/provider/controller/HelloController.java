@@ -2,6 +2,7 @@ package com.github.baifenghe.provider.controller;
 
 import com.github.baifenghe.common.anno.ParamsCheck;
 import com.github.baifenghe.common.util.R;
+import com.github.baifenghe.provider.common.Result;
 import com.github.baifenghe.provider.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -9,7 +10,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 
 /**
@@ -22,6 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+
+    @GetMapping("/test11")
+    public Result test11() {
+
+        return new Result<>(1, null, null);
+    }
 
     /**
      * 测试Validated注解
