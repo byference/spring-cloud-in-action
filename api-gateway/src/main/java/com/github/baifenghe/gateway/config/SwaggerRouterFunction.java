@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
+import org.springframework.web.reactive.function.server.RequestPredicates;
+import org.springframework.web.reactive.function.BodyInserters;
 import springfox.documentation.swagger.web.*;
 import java.util.Optional;
 
-import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
-import static org.springframework.web.reactive.function.BodyInserters.fromObject;
 
 /**
  * swagger对外接口
@@ -35,16 +35,16 @@ public class SwaggerRouterFunction {
     public RouterFunction<?> routerFunction() {
 
         return RouterFunctions
-                .route(GET("/swagger-resources"), request -> ServerResponse.ok()
+                .route(RequestPredicates.GET("/swagger-resources"), request -> ServerResponse.ok()
                         .contentType(MediaType.APPLICATION_JSON_UTF8)
-                        .body(fromObject(swaggerResources.get())))
-                .andRoute(GET("/swagger-resources/configuration/ui"), request -> ServerResponse.ok()
+                        .body(BodyInserters.fromObject(swaggerResources.get())))
+                .andRoute(RequestPredicates.GET("/swagger-resources/configuration/ui"), request -> ServerResponse.ok()
                         .contentType(MediaType.APPLICATION_JSON_UTF8)
-                        .body(fromObject(Optional.ofNullable(uiConfiguration)
+                        .body(BodyInserters.fromObject(Optional.ofNullable(uiConfiguration)
                                 .orElse(UiConfigurationBuilder.builder().build()))))
-                .andRoute(GET("/swagger-resources/configuration/security"), request -> ServerResponse.ok()
+                .andRoute(RequestPredicates.GET("/swagger-resources/configuration/security"), request -> ServerResponse.ok()
                         .contentType(MediaType.APPLICATION_JSON_UTF8)
-                        .body(fromObject(Optional.ofNullable(securityConfiguration)
+                        .body(BodyInserters.fromObject(Optional.ofNullable(securityConfiguration)
                                 .orElse(SecurityConfigurationBuilder.builder().build()))));
     }
 
