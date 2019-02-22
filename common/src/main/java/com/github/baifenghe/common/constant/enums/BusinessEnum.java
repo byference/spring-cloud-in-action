@@ -22,7 +22,6 @@ public enum BusinessEnum {
      */
     TOKEN_EMPTY_ERROR(10001, "token不能为空"),
 
-
     /**
      * 未知错误
      */

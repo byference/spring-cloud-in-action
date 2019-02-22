@@ -1,10 +1,10 @@
 package com.github.baifenghe.gateway.filter;
 
+import com.alibaba.fastjson.JSON;
 import com.github.baifenghe.common.constant.enums.BusinessEnum;
-import com.github.baifenghe.common.util.R;
+import com.github.baifenghe.toolkit.common.model.Result;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -65,8 +65,13 @@ public class AccessFilter extends ZuulFilter {
         if(StringUtils.isEmpty(token)) {
             log.warn(">> access token is empty");
             ctx.setSendZuulResponse(false);
+            /// 设置ContentType
             // ctx.getResponse().setContentType("application/json;charset=UTF-8");
-            ctx.setResponseBody(R.FAILED(BusinessEnum.TOKEN_EMPTY_ERROR.getCode(), BusinessEnum.TOKEN_EMPTY_ERROR.getMsg(), "access token is empty"));
+            String body = JSON.toJSONString(Result.builder()
+                    .code(BusinessEnum.TOKEN_EMPTY_ERROR.getCode())
+                    .message(BusinessEnum.TOKEN_EMPTY_ERROR.getMsg())
+                    .build());
+            ctx.setResponseBody(body);
             return null;
         }
         return null;

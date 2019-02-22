@@ -20,10 +20,12 @@ public class ConsumerHelloController {
     private HelloControllerRemote helloControllerRemote;
 
 
-    @ApiOperation("hello接口")
-    @PostMapping("/hello")
-    public String hello(@ApiParam("用户名") String userName) {
+    @ApiOperation("echo接口")
+    @PostMapping("/echo")
+    public String echo(@ApiParam("信息") String message) {
 
-        return helloControllerRemote.hello(userName);
+        return helloControllerRemote.echo(message);
     }
+
+
 }
