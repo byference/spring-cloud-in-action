@@ -1,6 +1,6 @@
-package com.github.baifenghe.comsumer.controller;
+package com.github.baifenghe.consumer.controller;
 
-import com.github.baifenghe.comsumer.feign.HelloControllerRemote;
+import com.github.baifenghe.consumer.feign.HelloControllerRemote;
 import com.github.baifenghe.toolkit.common.util.ResponseHelper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

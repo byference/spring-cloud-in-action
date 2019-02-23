@@ -1,8 +1,6 @@
-package com.github.baifenghe.comsumer.hystric;
+package com.github.baifenghe.consumer.hystric;
 
-import com.github.baifenghe.comsumer.feign.HelloControllerRemote;
-import com.github.baifenghe.toolkit.common.util.ResponseHelper;
-import org.springframework.http.ResponseEntity;
+import com.github.baifenghe.consumer.feign.HelloControllerRemote;
 import org.springframework.stereotype.Component;
 
 /**

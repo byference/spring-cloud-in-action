@@ -1,9 +1,9 @@
 package com.github.baifenghe;
 
-import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author bfh
@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  */
 @SpringBootApplication
 @EnableZuulProxy
-@EnableSwagger2Doc
+@EnableSwagger2
 public class ZuulGatewayApplication {
 
     public static void main(String[] args) {
