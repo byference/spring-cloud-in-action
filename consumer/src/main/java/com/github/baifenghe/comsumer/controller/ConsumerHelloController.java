@@ -1,10 +1,12 @@
 package com.github.baifenghe.comsumer.controller;
 
 import com.github.baifenghe.comsumer.feign.HelloControllerRemote;
+import com.github.baifenghe.toolkit.common.util.ResponseHelper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,9 +24,10 @@ public class ConsumerHelloController {
 
     @ApiOperation("echo接口")
     @PostMapping("/echo")
-    public String echo(@ApiParam("信息") String message) {
+    public ResponseEntity echo(@ApiParam("信息") String message) {
 
-        return helloControllerRemote.echo(message);
+        String echo = helloControllerRemote.echo(message);
+        return ResponseHelper.ok().body(echo);
     }
 
 
