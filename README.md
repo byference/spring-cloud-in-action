@@ -15,17 +15,13 @@
 
 
 
-### 待完成列表
+### TODO LIST
 
-
-- Zuul -> Spring Cloud Gateway
-- Hystrix -> Resilience4j
-
-
-
-- 将通用模块抽取到父pom中
-- oauth2
-- docker
+- [x] Zuul -> Spring Cloud Gateway
+- [ ] Hystrix -> Resilience4j
+- [ ] 将通用模块抽取到父pom中
+- [ ] oauth2
+- [ ] docker
 
 
 ### 模块说明
