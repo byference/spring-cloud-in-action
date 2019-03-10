@@ -17,7 +17,7 @@
 ### TODO LIST
 
 - [x] Zuul -> Spring Cloud Gateway
-- [x] docker
+- [ ] docker
 - [ ] Hystrix -> Resilience4j
 - [ ] oauth2
 
