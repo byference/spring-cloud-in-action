@@ -1,10 +1,9 @@
-## spring cloud 实战
+# spring cloud 实战
 
 ![](https://img.shields.io/badge/spring--cloud--in--action-1.0--SNAPSHOT-green.svg)
 
 
     
-
 
 
 
@@ -18,10 +17,9 @@
 ### TODO LIST
 
 - [x] Zuul -> Spring Cloud Gateway
+- [x] docker
 - [ ] Hystrix -> Resilience4j
-- [ ] 将通用模块抽取到父pom中
 - [ ] oauth2
-- [ ] docker
 
 
 ### 模块说明
@@ -32,7 +30,6 @@
 - 注册中心 registry:9000
 - 生产者 provider:9001
 - 消费者 consumer:9002
-
 
 
 
@@ -48,7 +45,6 @@
 - 注册中心地址: `http://localhost:9000/eureka/`
 - swagger文档地址: `http://localhost:9999/swagger-ui.html#/`
 - zipkin管理页面: `http://localhost:9411/`
-
 
 
 
